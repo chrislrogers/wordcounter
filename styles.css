@@ -21,6 +21,7 @@ textarea {
   background-color: #252830;
   color: #9b9dad;
   font-size: 14pt;
+  resize: none;
 }
 
 h2 {
