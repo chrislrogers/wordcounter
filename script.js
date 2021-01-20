@@ -21,12 +21,14 @@ function update(input) {
     sorted = Object.entries(uniqueWords).sort((a, b) => b[1] - a[1]);
 
     for (let i = 0; i < sorted.length; i++) {
-        results.innerHTML +=`
-            <tr>
-                <td>${sorted[i][0]}</td>
-                <td>${sorted[i][1]}</td>
-            <tr>
-        `;
+        if (sorted[i][0] !== ''){
+            results.innerHTML +=`
+                <tr>
+                    <td>${sorted[i][0]}</td>
+                    <td>${sorted[i][1]}</td>
+                <tr>
+            `;
+        }
     }
 }
 
