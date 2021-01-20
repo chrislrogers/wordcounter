@@ -17,7 +17,7 @@ textarea {
   outline: none;
   overflow: auto;
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-color: #252830;
   color: #9b9dad;
   font-size: 14pt;
@@ -27,3 +27,12 @@ textarea {
 h2 {
   text-align: left;
 }
+
+table {
+  width: 100%;
+}
+
+td, th {
+  padding: 10px;
+}
+
