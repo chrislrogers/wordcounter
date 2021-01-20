@@ -26,7 +26,7 @@ function update(input) {
                 <tr>
                     <td>${sorted[i][0]}</td>
                     <td>${sorted[i][1]}</td>
-                <tr>
+                </tr>
             `;
         }
     }
