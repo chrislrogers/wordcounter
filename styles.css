@@ -41,23 +41,9 @@ td {
 }
 
 .percentage {
-  fill: none;/*
-  position: fixed;
-  right: 5%;*/
-}
-/*
-#percentage1 {
-  top: 20%;
+  fill: none;
 }
 
-#percentage2 {
-  top: 40%;
-}
-
-#percentage3 {
-  top: 60%;
-}
-*/
 .bottom {
   stroke: #9b9dad;
   stroke-width: 4;
