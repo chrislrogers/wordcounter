@@ -39,3 +39,39 @@ td, th {
 td {
   color: #9b9dad;
 }
+
+.percentage {
+  fill: none;
+  position: fixed;
+  right: 5%;
+}
+
+#percentage1 {
+  top: 20%;
+}
+
+#percentage2 {
+  top: 40%;
+}
+
+#percentage3 {
+  top: 60%;
+}
+
+.bottom {
+  stroke: #9b9dad;
+  stroke-width: 4;
+}
+
+.top {
+  stroke: #21d8d6;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+text {
+  fill: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-anchor: middle;
+}
