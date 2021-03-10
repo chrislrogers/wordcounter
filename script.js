@@ -18,17 +18,17 @@ top1.style.strokeDasharray = circumference;
 top2.style.strokeDasharray = circumference;
 top3.style.strokeDasharray = circumference;
 
-input.addEventListener('input', function(e) { 
+input.addEventListener('input', function (e) {
     update(e.target.value);
 });
 
 let uniqueWords = {};
 
 function update(input) {
-    let words = (clean(input).split(/\s/)).sort();    
+    let words = (clean(input).split(/\s/)).sort();
     uniqueWords = {};
     let sorted = [];
-    
+
     counter.innerHTML = count(words);
     if (count(words) !== 0) {
         unique.innerHTML = uniqueCount(words);
@@ -36,12 +36,12 @@ function update(input) {
         unique.innerHTML = '0';
     }
     results.innerHTML = '';
-    
+
     sorted = Object.entries(uniqueWords).sort((a, b) => b[1] - a[1]);
 
     for (let i = 0; i < sorted.length; i++) {
-        if (sorted[i][0] !== ''){
-            results.innerHTML +=`
+        if (sorted[i][0] !== '') {
+            results.innerHTML += `
                 <tr>
                     <td>${sorted[i][0]}</td>
                     <td>${sorted[i][1]}</td>
@@ -49,9 +49,9 @@ function update(input) {
             `;
         }
     }
-    if (sorted[0] !== undefined && (percent(count(words),sorted[0][1])) !== 0) {
-        draw(percent(count(words),sorted[0][1]), top1);
-        text1.innerHTML = percent(count(words),sorted[0][1]) + "%";
+    if (sorted[0] !== undefined && (percent(count(words), sorted[0][1])) !== 0) {
+        draw(percent(count(words), sorted[0][1]), top1);
+        text1.innerHTML = percent(count(words), sorted[0][1]) + "%";
         title1.innerHTML = sorted[0][0];
     } else {
         draw(0, top1);
@@ -59,8 +59,8 @@ function update(input) {
         title1.innerHTML = '';
     }
     if (sorted[1] !== undefined) {
-        draw(percent(count(words),sorted[1][1]), top2);
-        text2.innerHTML = percent(count(words),sorted[1][1]) + "%";
+        draw(percent(count(words), sorted[1][1]), top2);
+        text2.innerHTML = percent(count(words), sorted[1][1]) + "%";
         title2.innerHTML = sorted[1][0];
     } else {
         draw(0, top2);
@@ -68,8 +68,8 @@ function update(input) {
         title2.innerHTML = '';
     }
     if (sorted[2] !== undefined) {
-        draw(percent(count(words),sorted[2][1]), top3);
-        text3.innerHTML = percent(count(words),sorted[2][1]) + "%";
+        draw(percent(count(words), sorted[2][1]), top3);
+        text3.innerHTML = percent(count(words), sorted[2][1]) + "%";
         title3.innerHTML = sorted[2][0];
     } else {
         draw(0, top3);
@@ -81,7 +81,7 @@ function update(input) {
 function uniqueCount(input) {
     let currentWord;
     let num = 0;
-    
+
     for (let i = 0; i < input.length; i++) {
         currentWord = input[i].toLowerCase();
         if (uniqueWords[currentWord] === undefined) {
@@ -117,10 +117,10 @@ function count(input) {
 }
 
 function percent(num, per) {
-    let sum = ((per/num) * 100);
+    let sum = ((per / num) * 100);
     if (sum === Infinity) {
         return 0;
     } else {
-    return sum.toFixed(1)
+        return sum.toFixed(1)
     }
 }
