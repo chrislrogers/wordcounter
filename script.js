@@ -121,6 +121,6 @@ function percent(num, per) {
     if (sum === Infinity) {
         return 0;
     } else {
-        return sum.toFixed(1)
+        return sum.toFixed(1);
     }
 }
